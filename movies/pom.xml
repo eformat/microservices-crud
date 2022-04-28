@@ -29,6 +29,16 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <repositories>
+        <repository>
+            <id>quarkus-microservice-template-demo-mvn-repo</id>
+            <url>https://raw.githubusercontent.com/eformat/quarkus-microservice-template-demo/maven/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>me.escoffier.microservice</groupId>
