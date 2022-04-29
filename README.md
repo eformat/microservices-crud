@@ -14,7 +14,7 @@ In this example, it exposes:
 
 ## Prerequisites
 
-[Build and Install the extension FIRST](https://github.com/eformat/quarkus-microservice-template-demo)
+We need the template extension:
 
 ```xml
         <dependency>
@@ -24,7 +24,26 @@ In this example, it exposes:
         </dependency>
 ```
 
-[If using podman, make sure to set DOCKER_HOST correctly](https://quarkus.io/blog/quarkus-devservices-testcontainers-podman) for quarkus dev services.
+You can:
+
+[Build and Install the extension locally FIRST](https://github.com/eformat/quarkus-microservice-template-demo)
+
+OR just use the github deployed version referenced in the `pom.xml`
+
+```xml
+    <repositories>
+    <repository>
+        <id>quarkus-microservice-template-demo-mvn-repo</id>
+        <url>https://raw.githubusercontent.com/eformat/quarkus-microservice-template-demo/maven/</url>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+        </snapshots>
+    </repository>
+</repositories>
+```
+
+[If using podman, make sure to set DOCKER_HOST correctly](https://quarkus.io/blog/quarkus-devservices-testcontainers-podman) for quarkus dev services postgres container.
 
 ## Run It
 
@@ -54,3 +73,4 @@ $ curl -s http://localhost:8080/api | jq .
   }
 ]
 ```
+
